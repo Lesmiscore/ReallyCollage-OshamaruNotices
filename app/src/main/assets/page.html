@@ -11,7 +11,11 @@
     <div>
         <script>
             var date = new Date();
-            document.write((date.getMonth() + 1) + "月" + date.getDate() + "日");
+            var mon = (date.getMonth() + 1);
+            if (mon < 10) {
+                mon = "0" + mon;
+            }
+            document.write(mon + "月" + date.getDate() + "日");
         </script>
         <br />
         {TITLE}
