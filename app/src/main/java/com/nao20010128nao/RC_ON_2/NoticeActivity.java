@@ -66,7 +66,8 @@ public class NoticeActivity extends AppCompatActivity
 				String html=raw
 					.replace("{TITLE}",getIntent().getStringExtra("title"))
 					.replace("{CONTENT}",getIntent().getStringExtra("mes"))
-					.replace("989898",getTextColor());
+					.replace("989898",getTextColor())
+					.replace("febabe",getBgColor());
 				return html;
 			}
 			public void onPostExecute(String s){
@@ -98,6 +99,25 @@ public class NoticeActivity extends AppCompatActivity
 		sb.append(Character.forDigit((b>>4)&0xf,16));
 		sb.append(Character.forDigit( b    &0xf,16));
 		
+		Log.d("getTextColor",sb.toString());
+		return sb.toString();
+	}
+	public String getBgColor(){
+		int color=MainActivity.bg.getPixel(5,5);
+		Log.d("getTextColor",color+"");
+
+		int r=Color.red(color);
+		int g=Color.green(color);
+		int b=Color.blue(color);
+
+		StringBuilder sb=new StringBuilder(6);
+		sb.append(Character.forDigit((r>>4)&0xf,16));
+		sb.append(Character.forDigit( r    &0xf,16));
+		sb.append(Character.forDigit((g>>4)&0xf,16));
+		sb.append(Character.forDigit( g    &0xf,16));
+		sb.append(Character.forDigit((b>>4)&0xf,16));
+		sb.append(Character.forDigit( b    &0xf,16));
+
 		Log.d("getTextColor",sb.toString());
 		return sb.toString();
 	}

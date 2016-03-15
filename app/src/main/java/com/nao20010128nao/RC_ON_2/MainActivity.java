@@ -10,7 +10,7 @@ import android.graphics.BitmapFactory;
 
 public class MainActivity extends Activity 
 {
-	public static Bitmap ab,tex,notify;
+	public static Bitmap ab,tex,notify,bg;
 	
 	EditText mes,title;
     @Override
@@ -42,5 +42,6 @@ public class MainActivity extends Activity
 		ab=BitmapFactory.decodeResource(getResources(),R.drawable.abcol);
 		tex=BitmapFactory.decodeResource(getResources(),R.drawable.texcol);
 		notify=BitmapFactory.decodeResource(getResources(),R.drawable.notifycol);
+		bg=BitmapFactory.decodeResource(getResources(),R.drawable.bgcol);
     }
 }
