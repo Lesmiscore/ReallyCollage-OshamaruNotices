@@ -5,9 +5,13 @@ import android.os.*;
 import android.widget.EditText;
 import android.view.View;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 
 public class MainActivity extends Activity 
 {
+	public static Bitmap ab,tex,notify;
+	
 	EditText mes,title;
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -33,6 +37,8 @@ public class MainActivity extends Activity
 					startActivity(new Intent(MainActivity.this,NoticeActivity.class));
 				}
 			});
-		
+		ab=BitmapFactory.decodeResource(getResources(),R.drawable.abcol);
+		tex=BitmapFactory.decodeResource(getResources(),R.drawable.texcol);
+		notify=BitmapFactory.decodeResource(getResources(),R.drawable.notifycol);
     }
 }
