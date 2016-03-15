@@ -1,11 +1,63 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center">
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
 
-    <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="wrap_content"
+		android:text="@string/mes"/>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal">
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:text="@string/edtTitle"
+			android:layout_weight="1.0"
+			android:id="@+id/btnEdtTitle"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:text="@string/edtMes"
+			android:layout_weight="1.0"
+			android:id="@+id/btnEdtMes"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:orientation="vertical"
+		android:layout_weight="1.0">
+
+		<EditText
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:id="@+id/texTitle"/>
+
+		<EditText
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:id="@+id/texMes"
+			android:visibility="gone"/>
+
+	</LinearLayout>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="@string/start"
+		android:id="@+id/start"/>
 
 </LinearLayout>
+
