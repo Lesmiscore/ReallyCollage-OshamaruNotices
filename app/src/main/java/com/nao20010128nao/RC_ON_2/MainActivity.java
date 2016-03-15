@@ -34,7 +34,9 @@ public class MainActivity extends Activity
 			});
 		findViewById(R.id.start).setOnClickListener(new View.OnClickListener(){
 				public void onClick(View v){
-					startActivity(new Intent(MainActivity.this,NoticeActivity.class));
+					startActivity(new Intent(MainActivity.this,NoticeActivity.class)
+							.putExtra("title",title.getText().toString())
+							.putExtra("mes",mes.getText().toString()));
 				}
 			});
 		ab=BitmapFactory.decodeResource(getResources(),R.drawable.abcol);
